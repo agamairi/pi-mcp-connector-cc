@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>pi-connector</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <section id="hero">
+      <h1>pi-connector</h1>
+      <p>Runs scoped coding work on a local model through Ollama.</p>
+      <a href="#how" class="btn">Get started</a>
+      <a href="#features" class="btn">See features</a>
+    </section>
+  </header>
+  <main>
+    <section id="features">
+      <article>
+        <h3>Scoped sandboxes</h3>
+        <p>Writes run in a disposable git worktree.</p>
+      </article>
+      <article>
+        <h3>Output-based checks</h3>
+        <p>The connector runs your verify command and sets the status.</p>
+      </article>
+      <article>
+        <h3>Local or LAN models</h3>
+        <p>Choose the Ollama model and endpoint per call.</p>
+      </article>
+      <article>
+        <h3>Job control</h3>
+        <p>Wait, check result, cancel.</p>
+      </article>
+    </section>
+    <section id="how">
+      <ol>
+        <li>Scope the task</li>
+        <li>Run it</li>
+        <li>Read the result header</li>
+      </ol>
+    </section>
+    <section id="tools">
+      <ul>
+        <li>pi_setup</li>
+        <li>pi_models</li>
+        <li>pi_execute</li>
+        <li>pi_research</li>
+        <li>pi_result</li>
+        <li>pi_wait</li>
+        <li>pi_list</li>
+        <li>pi_cancel</li>
+        <li>pi_configure</li>
+      </ul>
+    </section>
+  </main>
+  <footer>Runs on your machine.</footer>
+</body>
+</html>
