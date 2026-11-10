@@ -1,0 +1,4 @@
+{"type":"session","id":"error-session"}
+{"type":"message_update","assistantMessageEvent":{"type":"error","error":"provider broke"}}
+{"type":"auto_retry_end","finalError":"retry exhausted"}
+{"type":"message_end","message":{"role":"assistant","content":"last text"}}

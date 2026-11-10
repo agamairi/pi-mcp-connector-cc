@@ -1,0 +1,16 @@
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
+import { spawnSync } from "node:child_process";
+
+export function makeTempDir(prefix = "pi-connector-test-") { return fs.mkdtempSync(path.join(os.tmpdir(), prefix)); }
+export function run(command, args, options = {}) { return spawnSync(command, args, { cwd: options.cwd, env: options.env, input: options.input, encoding: "utf8", timeout: options.timeout }); }
+export function initGitRepo(cwd) {
+  run("git", ["init", "-b", "main"], { cwd });
+  run("git", ["config", "user.name", "pi connector tests"], { cwd });
+  run("git", ["config", "user.email", "tests@example.com"], { cwd });
+}
+export function commitAll(cwd, message = "initial") {
+  run("git", ["add", "."], { cwd });
+  run("git", ["commit", "-m", message], { cwd });
+}
